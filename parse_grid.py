@@ -3,24 +3,6 @@
 from typing import List
 from PIL import Image
 
-def write_str_list(lines: List[str], filename: str):
-    '''
-    puts the contents of a list of strings into a file
-    seperated by newline characters
-    :lines: a list of lines to be put into the file
-    :filename: the name of the file
-    '''
-    write_str('\n'.join(lines), filename)
-
-def write_str(text: str, filename: str):
-    '''
-    puts the contents of a string into a file
-    :text: the text to write a file
-    :filename: the name of the file
-    '''
-    with open(filename, 'w') as f:
-        f.write(text)
-
 def parse_grid(filename: str, grid_size: (int, int), offset: (int, int) = (0, 0)) -> str:
     '''
     parses an image and converts it into a grid of 'x' and '.'
